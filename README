@@ -1,0 +1,38 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+                             Computer Code Corresponding to:
+
+                           Fitting Structural Equation Models 
+                             via Variational Approximations       
+
+                             by K.-D. Dang and L. Maestrini
+
+                               Last changed: 26 NOV 2021.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+   The R script SEMfit.R fits a Bayesian structural equation model to a subset of the
+Holzinger and Swineford (1939). A single latent factor (visual ability) is considered. 
+The credible intervals obtained via mean field variational Bayes can be compared with 
+those of Markov chain Monte Carlo (MCMC) and MFVB paired with (percentile and pivotal) 
+bootstrap. The thick grey lines in the plots are MCMC credible intervals. The black 
+lines correspond to credible intervals from MFVB or MFVB plus bootstrap.
+
+   The script SEMfit.R is supported by files containing functions. These files are 
+summarised in the following table. 
+
+
+---------------------------------------------------------------------------------------
+          file name                               description 
+---------------------------------------------------------------------------------------
+
+MFVBforSEM.r                      R function for fitting the model via MFVB.
+
+MCMCforSEM.r                      Stan function for fitting the model via MCMC.
+
+SEMfit.R                          Main R script for fitting the structural equation via
+                                  MFVB and MCMC, and performing bootstrap.
+
+---------------------------------------------------------------------------------------
+
+
+                                     ---o---O---o---
