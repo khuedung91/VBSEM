@@ -9,7 +9,7 @@
 # Swineford (1939) data with a single latent
 # factor (visual ability).
 
-# Last changed: 26 NOV 2021.
+# Last changed: 29 NOV 2022.
 
 
 # Set tasks:
@@ -61,8 +61,8 @@ if (doMFVB)
   
   # Run MFVB function:
   
-  MFVBoutput <- MFVBforSEM(y,n,m,mu.lambda,sigsq.lambda,sigsq.nu,delta.psi,
-                           delta.sigsq,tolVal,maxIter,convChk=TRUE)
+  MFVBoutput <- MFVBforSEM(y,n,m,mu.lambda,sigsq.lambda,sigsq.nu,delta.psi,kappa.psi,
+                           delta.sigsq,kappa.sigsq,tolVal,maxIter,convChk=TRUE)
   
   # Extract MFVB results:
   
@@ -152,8 +152,8 @@ if(doBootstrap)
     
     # Run MFVB on b-th bootstrap dataset:
     
-    MFVBoutput <- MFVBforSEM(yBoot,n,m,mu.lambda,sigsq.lambda,sigsq.nu,delta.psi,
-                             delta.sigsq,tolVal,maxIter,convChk=FALSE)
+    MFVBoutput <- MFVBforSEM(yBoot,n,m,mu.lambda,sigsq.lambda,sigsq.nu,delta.psi,kappa.psi,
+                             delta.sigsq,kappa.sigsq,tolVal,maxIter,convChk=FALSE)
     
     # Extract MFVB results:
     
