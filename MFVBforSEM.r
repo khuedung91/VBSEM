@@ -3,11 +3,12 @@
 # For fitting a simple structural equation model
 # via mean field variational Bayes.
 
-# Last changed: 23 NOV 2021.
+# Last changed: 25 NOV 2022.
 
 
-MFVBforSEM <- function(y,n,m,mu.lambda=0,sigsq.lambda=1,sigsq.nu=1e2,delta.psi=rep(0.01,m),
-                    delta.sigsq=1,tolVal=1e-2,maxIter=1000,convChk=TRUE)
+MFVBforSEM <- function(y,n,m,mu.lambda=0,sigsq.lambda=1,sigsq.nu=1e2,
+                       delta.psi=rep(0.01,m),kappa.psi=rep(1,m),delta.sigsq=1,
+                       kappa.sigsq=1,tolVal=1e-2,maxIter=1000,convChk=TRUE)
 {
   # Initialize MFVB paramters to optimize:
   
